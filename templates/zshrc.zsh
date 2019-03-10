@@ -100,10 +100,30 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR='vim'
 alias e="emacs -nw"
 alias v="vim"
-export PATH=/usr/local/texlive/2017/bin/x86_64-linux:${PATH}
 
+# JAVA
+export JAVA_HOME=/usr/local/jdk1.8
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+# texlive
+export TEXLIVEPATH="/usr/local/texlive/2018/bin/x86_64-linux"
+export PATH=${TEXLIVEPATH}:${PATH}
+
+# android sdk
 export ANDROID_HOME=/home/zhaorenjie/SDK/android-sdk-linux
-export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+export PATH=${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${PATH}
+
+# node js
+export NODE_HOME="/usr/local/nodejs"
+export NODE_PATH="${NODE_HOME}/lib/node_modules"
+export PATH="${NODE_HOME}/bin:${NODE_PATH}:${PATH}"
+
+# android studio
+export ANDROID_STUDIO="/usr/local/android-studio/bin"
+export PATH="${ANDROID_STUDIO}:${PATH}"
+
 # for git gpg
 export GPG_TTY=$(tty)
 
